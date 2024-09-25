@@ -45,15 +45,9 @@ const signOutMethod = async (): Promise<void> => {
 <template>
   <app-menubar :model="items" class="menu">
     <template #start>
-      <img
-        src="/public/mmg.jpg"
-        alt="logo"
-        width="40"
-        height="40"
-        class="border-round-sm"
-        cursor="pointer"
-        to="/"
-      />
+      <router-link to="/" class="flex align-items-center">
+        <img src="/public/mmg.jpg" alt="logo" width="40" height="40" class="border-round-sm" />
+      </router-link>
     </template>
     <template #item="{ item, props }">
       <template v-if="item.show">
