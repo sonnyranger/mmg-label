@@ -65,6 +65,12 @@ const routes: RouteRecordRaw[] = [
     name: 'List',
     component: () => import('@/views/PageList.vue'),
     beforeEnter: checkAuth
+  },
+  {
+    path: '/artists',
+    name: 'Artists',
+    component: () => import('@/views/PageArtists.vue'),
+    beforeEnter: checkAuth
   }
 ]
 

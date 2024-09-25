@@ -33,6 +33,12 @@ const items = ref<IMenuItem[]>([
     icon: 'pi pi-list',
     path: '/list',
     show: computed((): boolean => !!userStore.userId)
+  },
+  {
+    label: 'Наши артисты',
+    icon: 'pi pi-users',
+    path: '/artists',
+    show: computed((): boolean => !!userStore.userId)
   }
 ])
 
