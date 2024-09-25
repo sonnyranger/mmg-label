@@ -97,23 +97,27 @@ const confirmRemoveInterview = async (id: string): Promise<void> => {
         <div class="flex align-items-center mr-2">
           <app-radio
             v-model="selectedFilterResult"
-            inputId="interviewResult1"
-            name="result"
-            value="Refusal"
-          />
-          <label class="ml-2" for="interviewResult1">Отклонено</label>
-        </div>
-        <div class="flex align-items-center mr-2">
-          <app-radio
-            v-model="selectedFilterResult"
             inputId="interviewResult2"
             name="result"
             value="Offer"
           />
           <label class="ml-2" for="interviewResult2">Принято</label>
         </div>
-        <app-button class="mr-2" @click="submitFilter" :disabled="!selectedFilterResult"
-          >Применить</app-button
+        <div class="flex align-items-center mr-2">
+          <app-radio
+            v-model="selectedFilterResult"
+            inputId="interviewResult1"
+            name="result"
+            value="Refusal"
+          />
+          <label class="ml-2" for="interviewResult1">Отклонено</label>
+        </div>
+        <app-button
+          class="mr-2"
+          @click="submitFilter"
+          :disabled="!selectedFilterResult"
+          severity="info"
+          >Сортировать</app-button
         >
         <app-button
           class="mr-2"
