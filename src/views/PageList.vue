@@ -117,15 +117,15 @@ const confirmRemoveInterview = async (id: string): Promise<void> => {
           @click="submitFilter"
           :disabled="!selectedFilterResult"
           severity="info"
-          >Сортировать</app-button
-        >
+          icon="pi pi-filter"
+        ></app-button>
         <app-button
           class="mr-2"
-          severity="danger"
+          severity="warn"
           :disabled="!selectedFilterResult"
           @click="clearFilter"
-          >Сбросить</app-button
-        >
+          icon="pi pi-eraser"
+        ></app-button>
       </div>
       <app-datatable :value="interviews">
         <app-column field="artist" header="Артист"></app-column>
